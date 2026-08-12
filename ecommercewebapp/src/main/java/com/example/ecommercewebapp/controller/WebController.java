@@ -50,4 +50,8 @@ public class WebController {
         model.addAttribute("orders", orders);
         return "orders";
     }
+    @GetMapping("/analytics")
+    public String analyticsPage() {
+        return "analytics";   // corresponds to analytics.html in templates
+    }
 }

@@ -22,6 +22,9 @@ public class User {
 
     @Column(name = "contact_number", nullable = false)
     private String contactNumber;
+    
+    @Column(name = "email_address", nullable = false)
+    private String emailAddress;
 
     // Getters and Setters (generate via Source → Generate Getters and Setters)
     public UUID getId() { return id; }
@@ -42,4 +45,6 @@ public class User {
     public String getFullName() {
         return name + " " + lastname;
     }
+    public String getemailAddress() { return emailAddress; }
+    public void setemailAddress(String emailAddress) { this.emailAddress = emailAddress; }
 }

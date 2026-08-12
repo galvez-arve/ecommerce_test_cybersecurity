@@ -1,5 +1,5 @@
 package com.example.ecommercewebapp.model;
-
+import java.time.LocalDateTime;
 import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.util.UUID;
@@ -41,6 +41,20 @@ public class Order {
     @Column(name = "total_price", nullable = false)
     private BigDecimal totalPrice;
 
+    @Column(name = "order_date")
+    private LocalDateTime orderDate;
+    
+    @Column(name = "order_status")
+    private String orderStatus;
+
+    // Add getter and setter
+    public LocalDateTime getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(LocalDateTime orderDate) {
+        this.orderDate = orderDate;
+    }
     // ============================================
     // GETTERS AND SETTERS
     // ============================================
@@ -84,6 +98,14 @@ public class Order {
     public void setProductName(String productName) {
         this.productName = productName;
     }
+    
+    public String getOrderStatus() {
+        return orderStatus;
+    }
+
+    public void setOrderStatus(String orderStatus) {
+        this.orderStatus = orderStatus;
+    }
 
     public Integer getProductsBought() {
         return productsBought;
@@ -124,4 +146,5 @@ public class Order {
     public void setTotalPrice(BigDecimal totalPrice) {
         this.totalPrice = totalPrice;
     }
+    
 }

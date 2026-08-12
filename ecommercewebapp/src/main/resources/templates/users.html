@@ -44,6 +44,7 @@
                     <th>Full Name</th>
                     <th>Address</th>
                     <th>Contact Number</th>
+					<th>Email Address</th>
                 </tr>
             </thead>
             <tbody id="tableBody">
@@ -114,6 +115,8 @@
             
             // Contact Number
             row.insertCell(3).textContent = user.contactNumber;
+			
+			row.insertCell(4).textContent = user.emailAddress;
         });
     }
 
@@ -169,5 +172,6 @@
     // Initial load
     window.onload = () => loadUsers(0);
 </script>
+<th:block th:replace="fragments/chat-widget :: chat-widget"></th:block>
 </body>
 </html>
