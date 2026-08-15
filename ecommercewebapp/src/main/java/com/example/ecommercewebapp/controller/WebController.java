@@ -21,7 +21,7 @@ public class WebController {
    
 
     @Autowired
-    private ProductRepository productRepository;
+    private ProductRepository productRepository1;
 
     @Autowired
     private OrderRepository orderRepository;
